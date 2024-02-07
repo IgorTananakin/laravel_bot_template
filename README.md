@@ -1,3 +1,28 @@
+не забыть создать базу в .env
+
+библиотека Telegraph https://defstudio.github.io/telegraph/installation
+Для работы Telegraph необходимо, чтобы вы выполнили миграцию:
+php artisan vendor:publish --tag="telegraph-migrations"
+php artisan migrate
+
+Вы можете опубликовать файл конфигурации с помощью:
+php artisan vendor:publish --tag="telegraph-config"
+
+Вы можете добавить нового бота, выдающего специальную команду ремесленника :
+php artisan telegraph:new-bot
+
+регистрация webhook
+php artisan telegraph:set-webhook {bot_id}
+аргумент bot_id обязателен, если вы создали более одного бота
+
+для создания ngrok
+1) регистрация ngrok
+2) скачать сам ngrok
+3) choco install ngrok
+4) ngrok config add-authtoken <код из ngrok>
+5) ngrok для OpenServer    ngrok http --host-header=<сайт в openserver> 80 
+
+markdown https://gist.github.com/fomvasss/8dd8cd7f88c67a4e3727f9d39224a84c
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
 <p align="center">
